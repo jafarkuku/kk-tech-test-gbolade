@@ -1,4 +1,3 @@
-// src/comms/comms.controller.ts
 import { Controller, Get, Param } from '@nestjs/common';
 import { CommsService } from './comms.service';
 

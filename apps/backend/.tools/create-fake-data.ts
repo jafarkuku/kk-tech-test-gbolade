@@ -1,20 +1,6 @@
+import { Cat, Customer } from '@kk/types';
 import { faker } from '@faker-js/faker';
 import { v4 as uuid } from 'uuid';
-
-interface Cat {
-  name: string;
-  subscriptionActive: boolean;
-  breed: string;
-  pouchSize: string;
-}
-
-interface Customer {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  cats: Cat[];
-}
 
 const POUCH_SIZES = ['A', 'B', 'C', 'D', 'E', 'F'];
 

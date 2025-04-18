@@ -1,14 +1,16 @@
-import { User, Cat } from '../../user/users.types';
 import { v4 as uuid } from 'uuid';
+import { faker } from '@faker-js/faker';
 
-const pouchSizes = ['A', 'B', 'C', 'D', 'E', 'F'] as const;
+import { User, Cat } from '../../user/users.types';
+
+const POUCH_SIZES = ['A', 'B', 'C', 'D', 'E', 'F'] as const;
 
 export function createFakeCat(overrides: Partial<Cat> = {}): Cat {
   return {
-    name: `Cat-${Math.random().toString(36).substring(7)}`,
-    breed: 'British Shorthair',
+    name: faker.person.firstName(),
+    breed: faker.animal.cat(),
     subscriptionActive: true,
-    pouchSize: pouchSizes[Math.floor(Math.random() * pouchSizes.length)],
+    pouchSize: POUCH_SIZES[Math.floor(Math.random() * POUCH_SIZES.length)],
     ...overrides,
   };
 }
@@ -16,9 +18,9 @@ export function createFakeCat(overrides: Partial<Cat> = {}): Cat {
 export function createFakeUser(overrides: Partial<User> = {}): User {
   return {
     id: uuid(),
-    firstName: 'Testy',
-    lastName: 'McTestface',
-    email: 'test@example.com',
+    firstName: faker.person.firstName(),
+    lastName: faker.person.lastName(),
+    email: faker.internet.email(),
     cats: [
       createFakeCat(),
       createFakeCat({ subscriptionActive: false }),
