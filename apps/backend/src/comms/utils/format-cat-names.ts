@@ -1,4 +1,8 @@
 export function formatCatNames(names: string[]): string {
+  if (names.length === 0) {
+    return '';
+  }
+
   if (names.length === 1) {
     return names[0];
   }

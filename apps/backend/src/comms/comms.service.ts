@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { UsersService } from '../user/users.service';
-import { CommsMessage } from './comms.types';
 import { formatCatNames } from './utils/format-cat-names';
+import { CommsMessage } from './comms.types';
 
 const PRICE_MAP = {
   A: 55.5,
