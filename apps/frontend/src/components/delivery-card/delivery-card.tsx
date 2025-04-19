@@ -7,7 +7,10 @@ import GiftBanner from './gift-banner/gift-banner';
 
 export default function DeliveryCard({ data }: { data: DeliveryData }) {
   return (
-    <div className="relative flex flex-col md:flex-row bg-white rounded-sm shadow-md w-full max-w-3xl self-start">
+    <section
+      aria-labelledby="delivery-title"
+      className="relative flex flex-col md:flex-row bg-white rounded-sm shadow-md w-full max-w-3xl self-start"
+    >
       {data.freeGift && <GiftBanner />}
       <div className="relative w-full md:w-[300px] flex justify-center md:justify-start">
         <div
@@ -19,7 +22,7 @@ export default function DeliveryCard({ data }: { data: DeliveryData }) {
         >
           <Image
             src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg"
-            alt="Cat"
+            alt="A picture of a cat"
             fill
             className="object-cover w-full h-auto"
           />
@@ -38,6 +41,6 @@ export default function DeliveryCard({ data }: { data: DeliveryData }) {
           <Button variant="outline">EDIT DELIVERY</Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

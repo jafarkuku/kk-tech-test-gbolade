@@ -78,6 +78,24 @@ yarn install
 yarn dev
 ```
 
-## Running the tests
-
 Open [Localhost on port 3000](http://localhost:3000/welcome/ff535484-6880-4653-b06e-89983ecf4ed5) with your browser to see the result.
+
+---
+
+## Running tests
+
+You can choose to run all tests from the root if you like, or cd into each app (frontend or backend) and run the tests. Either way the script to run is.
+
+```bash
+yarn test
+```
+
+---
+
+## Running lint
+
+You can choose to run lint from the root if you like, or cd into each app (frontend or backend) and run lint. Either way the script to run is
+
+```bash
+yarn lint
+```
